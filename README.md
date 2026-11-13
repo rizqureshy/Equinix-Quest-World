@@ -61,3 +61,10 @@ Routes: `/`, `/episodes/ghost-feed`, `/episodes/ghost-feed/debrief`. Set
 
 Everything is fictional. Scenario numbers are invented teaching values, not
 benchmarks. No data leaves the browser.
+
+## Hosted preview
+
+`.github/workflows/pages.yml` builds and deploys to GitHub Pages on every push
+to `main`. In the repository settings, Pages → Source must be set to
+**GitHub Actions**. "Deploy from a branch" serves the uncompiled source and
+shows a blank page.
