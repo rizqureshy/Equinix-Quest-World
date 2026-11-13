@@ -19,5 +19,10 @@ Current build state and known gaps are in `docs/implementation-status.md`.
 - Product decisions on record: no claims ledger, no Blender pipeline (procedural
   geometry), generated cinematic media comes after Episode 1 passes review.
 
+- GitHub Pages serves the root of `main` as-is. Root `index.html`, `404.html`,
+  `assets/` and `episodes/` are build output: never edit them by hand. Run
+  `npm run build:pages` and commit the result before pushing to `main`. The
+  source entry is `src/index.html`.
+
 Commands: `npm run typecheck`, `npm run test`, `npm run build`,
 `npm run test:e2e` (needs a build first), `npm run preview`.

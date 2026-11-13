@@ -62,9 +62,18 @@ Routes: `/`, `/episodes/ghost-feed`, `/episodes/ghost-feed/debrief`. Set
 Everything is fictional. Scenario numbers are invented teaching values, not
 benchmarks. No data leaves the browser.
 
-## Hosted preview
+## Hosted preview (GitHub Pages)
 
-`.github/workflows/pages.yml` builds and deploys to GitHub Pages on every push
-to `main`. In the repository settings, Pages → Source must be set to
-**GitHub Actions**. "Deploy from a branch" serves the uncompiled source and
-shows a blank page.
+Pages is set to "Deploy from a branch", `main`, root folder. That serves the
+repository files as they are, so the compiled site is committed at the root:
+`index.html`, `404.html`, `assets/`, `episodes/` and `.nojekyll`. Do not edit
+those by hand. The source entry is `src/index.html`.
+
+Before pushing changes to `main`, rebuild and commit the site:
+
+```bash
+npm run build:pages
+```
+
+The script builds with the base path `/Equinix-Quest-World/`. Set `BASE_PATH`
+to override it if the repository is renamed or a custom domain is added.
